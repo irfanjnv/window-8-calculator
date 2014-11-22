@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>help</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- App1 references -->
+    <link href="/css/help2.css" rel="stylesheet" />
+    <script src="/js/help.js"></script>
+    <script type="text/javascript">WinJS.UI.processAll();</script>
+</head>
+<body>
+    <a  href="/html/trigono.html"><img class="next" src="/images/next.png"/></a>
+    <p id="caution">!!!...Always open HELP(?)  in wide screen</p>
+	<div id="log">
+	<h1 style="color:orange">Logarithm</h1>
+	<h3>
+		In order to calculate value of Log(base 10 or e)<br/>
+		1-Input number either by keyboard or <br /> calculator's buttons.<br />
+		2- Press "Log" for base '10' and "ln" for base 'e'.<br/>
+			Example: Calculate log(10)<br/>
+				input 10 and press log button<br/>
+        <br />
+		In order  to use log value of any base number<br/>
+		1- Input base value of log.<br/>
+		2- Then press Logx(y)( 'x' stands for base).<br/>
+		3- Input number to calculate log value<br/>
+			Example: calculate value of log<sub>5</sub>(10)<br/>
+				Input '5' and then press Logx(y)<br/>
+				input '10' and then press equal('=') button/enter<br/>
+	</h3>
+		</div>
+    <div id="app_bar" data-win-control="WinJS.UI.AppBar">
+     <button class="appbar1" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'back', id:'', label:'Back', onclick:help, section:'global', type:'button'}"></button>
+       </div>
+</body>
+</html>

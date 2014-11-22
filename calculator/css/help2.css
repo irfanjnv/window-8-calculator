@@ -1,0 +1,174 @@
+﻿*{
+	padding:0px;
+}
+
+#app_bar {
+    display:-ms-flexbox;
+    background-color:black;
+}
+a {
+    color:black;
+}
+h3 {
+     font-family:'Letter Gothic Std';
+}
+@media screen and (-ms-view-state: fullscreen-landscape) {
+    body {
+        background-color: #660066;
+        text-align: justify;
+        color: white;
+        font-size: 170%;
+        font-family: 'Calibri';
+        margin-left: 4%;
+    }
+
+    img.back {
+        position: absolute;
+        top: 4%;
+        left: 3%;
+        height: 8%;
+        width: 5%;
+    }
+
+    img.next {
+        position: absolute;
+        top: 4%;
+        left: 90%;
+        height: 8%;
+        width: 5%;
+    }
+
+    h3 {
+        display: -ms-flexbox;
+        -ms-flex: 1;
+        position: absolute;
+        top: 23%;
+        left: 4%;
+        font-size: 110%;
+    }
+
+    #caution {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+        text-decoration: underline;
+        font-family: Cambria;
+        font-size: 200%;
+    }
+
+    div {
+        text-align: left;
+    }
+}
+
+@media screen and (-ms-view-state: filled) {
+	body {
+	 background-color: #660066;
+	text-align:justify;
+	color:white;
+	font-size:170%;
+	font-family:'Calibri'
+	
+}
+    img.back {
+    position:absolute;
+        top:4%;
+        left:3%;
+		height:8%;
+		width:7%;
+}
+img.next {
+    position:absolute;
+        top:4%;
+        left:90%;
+		height:8%;
+		width:7%;
+}
+    #caution{
+	display:none;
+}
+h1{
+	text-align:center;
+	text-decoration:underline;
+	font-family:Cambria;
+    font-size:180%;
+}
+
+    h3 {
+        display:-ms-flexbox;
+        -ms-flex:1;
+        position:absolute;
+    top:23%;
+    left:4%;
+    font-size:110%;
+    }
+}
+
+@media screen and (-ms-view-state: snapped) {
+    body {
+         background-color: #660066;
+    } 
+    h1,img,a ,h3{
+        display:none;
+    }
+    #caution{
+        position:absolute;
+	color:red;
+	font-size:100%;
+	left:3%;
+	top:20%;
+
+    }
+	
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+	body {
+         display:-ms-flexbox;
+        -ms-flex:1;
+	 background-color: #660066;
+	text-align:justify;
+	color:white;
+	font-size:190%;
+	font-family:'Calibri'
+	
+}
+    #caution{
+	display:none;
+   
+    
+}
+      img.back {
+    position:absolute;
+        top:4%;
+        left:3%;
+		height:8%;
+		width:12%;
+}
+img.next {
+    position:absolute;
+        top:4%;
+        left:88%;
+		height:8%;
+		width:12%;
+}
+h1{
+    position:absolute;
+    top:20%;
+    left:40%;
+	text-align:center;
+	text-decoration:underline;
+	font-family:Cambria;
+        font-size:200%;
+}
+    h3{
+        display:-ms-flexbox;
+        -ms-flex:1;
+        position:absolute;
+    top:28%;
+    left:4%;
+    font-size:110%;
+    }
+}

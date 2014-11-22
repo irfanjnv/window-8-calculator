@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- calculator references -->
+    <link href="/css/help.css" rel="stylesheet" />
+    <script src="/js/jquery-1.8.0.js"></script>
+    <script src="/js/help.js"></script>
+    <script type="text/javascript">WinJS.UI.processAll();</script>
+
+</head>
+<body>
+	<p id="caution">!!!...Always open HELP(?)  in wide screen</p>
+    <h1>Guide to use calculator</h1>
+    <form id="form_guide">
+		<table>
+			<tr>
+    <td><input type="button" class="button_" value="Shiftkey" onclick="javascript: shift();" style="left:51%; top: 15%;" /></td>
+    <td><input type="button" class="button_" value="Logarithm" onclick="javascript: log_();" style="top: 15%; left: 5%;" /></td>
+    <td><input type="button" class="button_" value="Trigonometric" onclick="javaascript: trigono();" style="top: 15%; left: 28%;" /></td>
+    <td><input type="button" class="button_" value="e^x" onclick="javascript: ex();" style="left: 17%; top: 45%;" /></td>
+	</tr>
+	<tr>
+    <td><input type="button" class="button_" value="x^y" onclick="javascript: xy();" style="left: 40%; top: 45%;" /></td>
+    <td><input type="button" class="button_" value="x√y" onclick="javascript: root();" style="left: 63%; top: 45%;" /></td>
+     <td><input type="button" class="button_" value="10^x" onclick="javascript: _10x();" style="left: 74%; top: 15%;" /></td>
+	  </tr>
+	  <tr>
+	  <td><input type="button" class="button_" value="About" onclick="javascript: about();" style="left: 40%; top: 73%;" /></td>
+    </tr>
+	</table>
+         </form>
+     <div id="app_bar" data-win-control="WinJS.UI.AppBar">
+     <button class="appbar1" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'back', id:'', label:'Back', onclick:scientific, section:'global', type:'button'}"></button>
+       </div>
+	
+       
+</body>
+</html>

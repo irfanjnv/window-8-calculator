@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>help</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- App1 references -->
+    <link href="/css/help2.css" rel="stylesheet" />
+    <script src="/js/help.js"></script>
+    <script type="text/javascript">WinJS.UI.processAll();</script>
+</head>
+<body>
+    <a id="back" href="/html/e^x.html"><img class="back"  src="/images/back.png"/></a>
+    <a id="next" href="/html/root.html"><img class="next" src="/images/next.png"/></a>
+    <p id="caution">!!!...Always open HELP(?)  in wide screen</p>
+	<div id="xy">
+		<h1 style="color:orange">x<sup>y</sup></h1>
+		<h3>
+		1- Input value of number(x)<br />
+		2- Press "x^y" button<br />
+		3- Input value of power(y)<br />
+		4- press equal button<br />
+			Example: calculate value of 2<sup>3</sup><br />
+				1- input 2<br />
+				2- press x^y button<br />
+				3- input 3<br />
+				4- press equal/enter key<br />
+		</h3>
+		</div>
+    <div id="app_bar" data-win-control="WinJS.UI.AppBar">
+     <button class="appbar1" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'back', id:'', label:'Back', onclick:help, section:'global', type:'button'}"></button>
+       </div>
+</body>
+</html>

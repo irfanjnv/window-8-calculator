@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Scientific Calci ++</title>
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- calculator references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/jquery-1.8.0.js"></script>
+    <script src="/js/script.js"></script>
+    <script type="text/javascript">WinJS.UI.processAll();</script>
+    
+
+</head>
+<body id="body" onload="">
+   
+    <form name="myform" id="form1">
+        <div id="screen_main">
+            <input type="text" id="screen1" name="output1" disabled readonly="readonly"/><br>
+            <input type="text" id="screen" name="output" readonly="readonly" autofocus="autofocus" onkeydown="javascript:key_detect()" /><br>
+            </div>
+        <div id="check">
+            <code class="code">Degrees </code>
+            <input type="radio" class="input_rd" id="degree" checked name="check" value="Degree" onclick="javascript: set1();" />
+            <code class="code">&nbsp;Radians </code>
+            <input type="radio" class="input_rd" id="radian" name="check" value="Radian" onclick="javascript: set0();" />
+        </div>
+
+
+        <div id="table">
+            <table id="table1">
+                <tr>
+
+                    <td><input type="button" class="input_m" value="MS" onmouseover="OnMouseIn6 (this)" onmouseout="OnMouseOut6 (this)" onmousedown="onMouseenter6 (this)" onmouseup="OnMouseIn6 (this)" onclick="javascript: m_save();" style="left: 0.1%; top: 1.8%;"></td>
+                    <td><input type="button" class="input_m" value="MR" onmouseover="OnMouseIn6 (this)" onmouseout="OnMouseOut6 (this)" onmousedown="onMouseenter6 (this)" onmouseup="OnMouseIn6 (this)" onclick="javascript: m_read();" style="left: 25%; top: 1.8%;"></td>
+                    <td><input type="button" class="input_m" value="M+" onmouseover="OnMouseIn6 (this)" onmouseout="OnMouseOut6 (this)" onmousedown="onMouseenter6 (this)" onmouseup="OnMouseIn6 (this)" onclick="javascript: m_add();" style="left: 49.9%; top: 1.8%;"></td>
+                    <td><input type="button" class="input_m" value="M-" onmouseover="OnMouseIn6 (this)" onmouseout="OnMouseOut6 (this)" onmousedown="onMouseenter6(this)" onmouseup="OnMouseIn6 (this)" onclick="javascript: m_subtract();" style="left: 74.8%; top: 1.8%;"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="input_s" value="C" onmouseover="OnMouseIn2 (this)" onmouseout="OnMouseOut2 (this)" onmousedown="onMouseenter2(this)" onmouseup="OnMouseIn2 (this)" onclick="javascript: input_button(value);" style="left: 0.1%; top: 15.84%;"></td>
+                    <td><input type="button" class="input_s" value="&larr;" onmouseover="OnMouseIn2 (this)" onmouseout="OnMouseOut2 (this)" onmousedown="onMouseenter2(this)" onmouseup="OnMouseIn2 (this)" onclick="javascript: delt();" style="left: 25%; top: 15.84%;" /></td>
+                    <td><input type="button" class="input_s" value="AC" onmouseover="OnMouseIn2 (this)" onmouseout="OnMouseOut2 (this)" onmousedown="onMouseenter2(this)" onmouseup="OnMouseIn2 (this)" onclick="javascript: clear_store();" style="left: 49.9%; top: 15.84%;" /></td>
+                    <td><input type="button" class="input_s" value="Ans" onmouseover="OnMouseIn2 (this)" onmouseout="OnMouseOut2 (this)" onmousedown="onMouseenter2(this)" onmouseup="OnMouseIn2 (this)" onclick="javascript: answer();" style="left: 74.8%; top: 15.84%;" /></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="input" value="(" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter (this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value)" style="left: 0.1%; top: 29.88%;" /></td>
+                    <td><input type="button" class="input" value=")" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter (this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value);" style="left: 25%; top: 29.88%;" /></td>
+                    <td><input type="button" class="input" value="-" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value)" style="left: 49.9%; top: 29.88%;"></td>
+                    <td><input type="button" class="input" value="+" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value)" style="left: 74.8%; top: 29.88%;"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="input_n" value="7" onmouseover="OnMouseIn3 (this)" onmouseout="OnMouseOut3 (this)" onmousedown="onMouseenter3 (this)" onmouseup="OnMouseIn3 (this)" onclick="javascript: input_button(value)" style="left: 0.1%; top: 43.92%;"></td>
+                    <td><input type="button" class="input_n" value="8" onmouseover="OnMouseIn3 (this)" onmouseout="OnMouseOut3 (this)" onmousedown="onMouseenter3 (this)" onmouseup="OnMouseIn3 (this)" onclick="javascript: input_button(value)" style="left: 25%; top: 43.92%;"></td>
+                    <td><input type="button" class="input_n" value="9" onmouseover="OnMouseIn3 (this)" onmouseout="OnMouseOut3 (this)" onmousedown="onMouseenter3 (this)" onmouseup="OnMouseIn3 (this)" onclick="javascript: input_button(value)" style="left: 49.9%; top: 43.92%;"></td>
+                    <td><input type="button" class="input" value="÷" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value)" style="left: 74.8%; top: 43.92%;"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="input_n" value="4" onmouseover="OnMouseIn3 (this)" onmouseout="OnMouseOut3 (this)" onmousedown="onMouseenter3 (this)" onmouseup="OnMouseIn3 (this)" onclick="javascript: input_button(value)" style="left: 0.1%; top: 57.96%;"></td>
+                    <td><input type="button" class="input_n" value="5" onmouseover="OnMouseIn3 (this)" onmouseout="OnMouseOut3 (this)" onmousedown="onMouseenter3 (this)" onmouseup="OnMouseIn3 (this)" onclick="javascript: input_button(value)" style="left: 25%; top: 57.96%;"></td>
+                    <td><input type="button" class="input_n" value="6" onmouseover="OnMouseIn3 (this)" onmouseout="OnMouseOut3 (this)" onmousedown="onMouseenter3 (this)" onmouseup="OnMouseIn3 (this)" onclick="javascript: input_button(value)" style="left: 49.9%; top: 57.96%;"></td>
+                    <td><input type="button" class="input" value="*" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value)" style="left: 74.8%; top: 57.96%;"></td>
+                </tr>
+                <tr>
+
+                    <td><input type="button" class="input_n" value="1" onmouseover="OnMouseIn3 (this)" onmouseout="OnMouseOut3 (this)" onmousedown="onMouseenter3 (this)" onmouseup="OnMouseIn3 (this)" onclick="javascript: input_button(value)" style="left: 0.1%; top: 72%;"></td>
+                    <td><input type="button" class="input_n" value="2" onmouseover="OnMouseIn3 (this)" onmouseout="OnMouseOut3 (this)" onmousedown="onMouseenter3 (this)" onmouseup="OnMouseIn3 (this)" onclick="javascript: input_button(value)" style="left: 25%; top: 72%;"></td>
+                    <td><input type="button" class="input_n" value="3" onmouseover="OnMouseIn3 (this)" onmouseout="OnMouseOut3 (this)" onmousedown="onMouseenter3 (this)" onmouseup="OnMouseIn3 (this)" onclick="javascript: input_button(value)" style="left: 49.9%; top: 72%;"></td>
+                    <td rowspan="2"><input type="button"  class="input_r" value="=" onmouseover="OnMouseIn4 (this)" onmouseout="OnMouseOut4 (this)" onmousedown="onMouseenter4 (this)" onmouseup="OnMouseIn4 (this)" onclick="javascript: result();" style="left: 74.8%; top: 72%;"></td>
+
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" class="input_k" value="0" onmouseover="OnMouseIn5 (this)" onmouseout="OnMouseOut5 (this)" onmousedown="onMouseenter5 (this)" onmouseup="OnMouseIn5 (this)" onclick="javascript: input_button(value)" style="left: 0.1%; top: 86.04%;"></td>
+                    <td><input type="button" class="input" value="." onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value)" style="left: 49.9%; top: 86.04%;"></td>
+                </tr>
+            </table>
+            <table id="table2">
+                <tr>
+                    <td><input type="button" class="input" value="sin" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value);" style="left: 0.1%; top: 1.8%;" /></td>
+                    <td><input type="button" class="input" value="cos" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value);" style="left: 25%; top: 1.8%;" /></td>
+                    <td><input type="button" class="input" value="tan" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value);" style="left: 49.9%; top: 1.8%;" /></td>
+                    <td><input type="button" class="input_c" value="π" onmouseover="OnMouseIn1 (this)" onmouseout="OnMouseOut1 (this)" onmousedown="onMouseenter1 (this)" onmouseup="OnMouseIn1 (this)" onclick="javascript: input_button(value);" style="left: 74.84%; top: 1.8%;" /></td>
+                    
+                </tr>
+                <tr>
+                    <td><input type="button" class="input" value="asin" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value);" style="left: 0.1%; top: 15.84%;" /></td>
+                    <td><input type="button" class="input" value="acos" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value);" style="left: 25%; top: 15.84%;" /></td>
+                    <td><input type="button" class="input" value="atan" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value);" style="left: 49.9%; top: 15.84%;" /></td>
+                    <td><input type="button" class="input_c" value="e" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript:input_button(value)" style="left: 74.8%; top: 15.84%;"></td>
+                    
+                </tr>
+                <tr>
+                    <td><input type="button" class="input" value="log" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: log_(value);" style="left: 0.1%; top: 29.88%;" /></td>
+                    <td><input type="button" class="input" value="ln" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: log_(value);" style="left: 25%; top: 29.88%;" /></td>
+                    <td><input type="button" class="input" value="n!" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: fact1();" style="left: 49.9%; top: 29.88%;" /></td>
+                    <td><input type="button" class="input" value="x²" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript:input_button(value)" style="left: 74.8%; top: 29.88%;"></td>
+                    
+                </tr>
+                <tr>
+                    <td><input type="button" class="input" value="sinh" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter (this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value);" style="left: 0.1%; top: 43.92%;" /></td>
+                    <td><input type="button" class="input" value="cosh" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter (this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value);" style="left: 25%; top: 43.92%;" /></td>
+                    <td><input type="button" class="input" value="tanh" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter (this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value);" style="left: 49.9%; top: 43.92%;" /></td>
+                    <td><input type="button" class="input" value="1/x" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: inverse();" style="left: 74.8%; top: 43.92%;" /></td>
+                    
+                </tr>
+                <tr>
+                    <td><input type="button" class="input" value="asinh" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter (this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value);" style="left: 0.1%; top: 57.96%;" /></td>
+                    <td><input type="button" class="input" value="acosh" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter (this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value);" style="left: 25%; top: 57.96%;" /></td>
+                    <td><input type="button" class="input" value="atanh" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter (this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value);" style="left: 49.9%; top: 57.96%;" /></td>
+                    <td><input type="button" class="input" value="%" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript:input_button(value);" style="left: 74.8%; top: 57.96%;" /></td>
+                    
+                </tr>
+                <tr>
+                    <td><input type="button" class="input" id="" value="x^y" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter (this)" onmouseup="OnMouseIn (this)" onclick="javascript: advance_input(value);" style="left: 0.1%; top: 72%;" /></td>
+                    <td><input type="button" class="input" value="Logx(y)" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter (this)" onmouseup="OnMouseIn (this)" onclick="javascript: advance_input(value);" style="left: 25%; top: 72%;" /></td>
+                    <td><input type="button" class="input" value="x√y" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter (this)" onmouseup="OnMouseIn (this)" onclick="javascript: advance_input(value);" style="left: 49.9%; top: 72%" /></td>
+                    <td><input type="button" class="input" value="√ " onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter (this)" onmouseup="OnMouseIn (this)" onclick="javascript: sqrt();" style="left: 74.8%; top: 72%;" /></td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" class="input_k1" value="=" onmouseover="OnMouseIn4 (this)" onmouseout="OnMouseOut4 (this)" onmousedown="onMouseenter4 (this)" onmouseup="OnMouseIn4 (this)" onclick="javascript:result();" style="left: 0.1%; top: 86.04%;" /></td>
+                    <td><input type="button" class="input" value="e^x" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value);" style="left: 49.9%; top: 86.04%;" /></td>
+                    <td><input type="button" class="input" value="10^x" onmouseover="OnMouseIn (this)" onmouseout="OnMouseOut (this)" onmousedown="onMouseenter(this)" onmouseup="OnMouseIn (this)" onclick="javascript: input_button(value);" style="left: 74.8%; top: 86.04%;"></td>
+                 </tr>
+
+            </table>
+        </div>
+    </form>
+    <div id="app_bar" data-win-control="WinJS.UI.AppBar">
+        <button class="appbar_theme" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'list', id:'', label:'Themes', onclick:null, section:'global', type:'button'}"></button>
+        <button class="appbar" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'previewlink', id:'', label:'Classic', onclick:classic, section:'global', type:'button'}"></button>
+        <button class="appbar" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'previewlink', id:'', label:'Nature', onclick:nature, section:'global', type:'button'}"></button>
+        <button class="appbar" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'previewlink', id:'', label:'Wooden', onclick:wooden, section:'global', type:'button'}"></button>
+        <button class="appbar_type" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'list', id:'', label:'View', onclick:null, section:'global', type:'button'}"></button>
+        <button class="appbar1" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'previewlink', id:'', label:'Standard', onclick:standard, section:'global', type:'button'}"></button>
+        <button class="appbar1" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'previewlink', id:'', label:'Scientific', onclick:scientific, section:'global', type:'button'}"></button>
+        <button class="appbar_help" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'help', id:'', label:'Help', onclick:help, section:'global', type:'button'}"></button>
+
+    </div>
+</body>
+</html>

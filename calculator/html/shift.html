@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>help</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- App1 references -->
+    <link href="/css/help2.css" rel="stylesheet" />
+    <script src="/js/help.js"></script>
+    <script type="text/javascript">WinJS.UI.processAll();</script>
+</head>
+<body>
+	
+        <a  href="/html/trigono.html"><img class="back"  src="/images/back.png"/></a>
+        <a  href="/html/10^x.html"><img class="next"  src="/images/next.png"/></a>
+        <p id="caution">!!!...Always open HELP(?)  in wide screen</p>
+		<div id="Shift">
+		<h1 style="color:orange">Shiftkey</h1>
+		<h3>
+		To use " * , / , % " of keyboard printed along with<br /> numerals<br />
+		1- Press shift key and then that specific <br />  key on keyboard<br />
+			Example: 1st press shift key and then leave it<br />
+				Then press <sub><img src="/images/key.png" width="50" height="30"/></sub> to input '*'.<br />
+		</h3>
+		</div>
+		
+		<div id="app_bar" data-win-control="WinJS.UI.AppBar">
+     <button class="appbar1" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'back', id:'', label:'Back', onclick:help, section:'global', type:'button'}"></button>
+       </div>
+		
+</body>
+</html>

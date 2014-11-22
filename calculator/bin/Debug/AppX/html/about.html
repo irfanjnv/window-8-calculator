@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>help</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- App1 references -->
+    <link href="/css/help2.css" rel="stylesheet" />
+    <script src="/js/help.js"></script>
+    <script type="text/javascript">WinJS.UI.processAll();</script>
+</head>
+<body>
+    <a  href="/html/root.html"><img  class="back" src="/images/back.png"/></a>
+    <p id="caution">!!!...Always open HELP(?)  in wide screen</p>
+	<div id="about">
+		<h1 style="color:orange">About</h1>
+		<h3>
+		Scientific Calculator <br />Version 1.0.0.10 <br />
+            capable of computing all <br />simple arithmetic
+            operation along with <br /> trigonometric and logarithmic operations. <br />
+		Three different themes and sticky notes.<br />
+				developed by: <a href="#" onclick="window.open('http://in.linkedin.com/in/irfanjnv/', '_system')">Irfan Khan</a>
+		</h3>
+		</div>
+    <div id="app_bar" data-win-control="WinJS.UI.AppBar">
+     <button class="appbar1" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{icon:'back', id:'', label:'Back', onclick:help, section:'global', type:'button'}"></button>
+       </div>
+</body>
+</html>

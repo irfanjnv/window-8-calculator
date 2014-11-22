@@ -1,0 +1,13 @@
+E:\Admin\basic\win\calculator\calculator\bin\Debug\resources.pri
+E:\Admin\basic\win\calculator\calculator\bin\Debug\AppxManifest.xml
+E:\Admin\basic\win\calculator\calculator\bin\Debug\calculator.build.appxrecipe
+E:\Admin\basic\win\calculator\calculator\bld\Debug\priconfig.xml
+E:\Admin\basic\win\calculator\calculator\bld\Debug\layout.resfiles
+E:\Admin\basic\win\calculator\calculator\bld\Debug\resources.resfiles
+E:\Admin\basic\win\calculator\calculator\bld\Debug\pri.resfiles
+E:\Admin\basic\win\calculator\calculator\bld\Debug\LanguageQualifiers.txt
+E:\Admin\basic\win\calculator\calculator\bld\Debug\ProjectArchitectures.txt
+E:\Admin\basic\win\calculator\calculator\bld\Debug\priconfig.xml.intermediate
+E:\Admin\basic\win\calculator\calculator\bld\Debug\layout.resfiles.intermediate
+E:\Admin\basic\win\calculator\calculator\bld\Debug\resources.resfiles.intermediate
+E:\Admin\basic\win\calculator\calculator\bld\Debug\pri.resfiles.intermediate

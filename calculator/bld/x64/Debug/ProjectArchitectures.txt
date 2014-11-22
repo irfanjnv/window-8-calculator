@@ -1,0 +1,1 @@
+E:\Admin\basic\win\calculator\calculator\calculator.jsproj;x64
